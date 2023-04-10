@@ -12,6 +12,13 @@ public class ShowRemain : MonoBehaviour
     public GameObject text5;
     public GameObject text6;
     public GameObject text7;
+    public static ShowRemain instance;
+    public bool check = false;
+
+    void Awake()
+    {
+        ShowRemain.instance = this;
+    }
 
     void Start(){
             text1.SetActive(false);
@@ -23,6 +30,7 @@ public class ShowRemain : MonoBehaviour
             text7.SetActive(false);
     }
     public void whenButtonClicked(){
+        check = true;
         if(text1.activeInHierarchy == true){
             text1.SetActive(false);
             text2.SetActive(false);

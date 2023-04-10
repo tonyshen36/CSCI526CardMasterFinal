@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public float moveTimeLeft = 0;
     public bool isMovingRight = false;
     public bool isMovingLeft = false;
-    
+    public bool isMoveSpike;
     public float acc;
 
     private int move_counter;

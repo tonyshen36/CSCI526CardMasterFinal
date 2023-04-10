@@ -7,6 +7,7 @@ public class SpikeMovement : MonoBehaviour
     public float range = 10.0f;
     private Rigidbody2D rb;
     private bool isMove = false;
+   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,6 +32,15 @@ public class SpikeMovement : MonoBehaviour
             rb.isKinematic = true;
             rb.velocity = Vector2.zero;
             transform.position = new Vector3(transform.position.x, Mathf.Round(transform.position.y), transform.position.z);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            PlayerController.instance.isMoveSpike = true;
+            Debug.Log("Spike");
         }
     }
 }

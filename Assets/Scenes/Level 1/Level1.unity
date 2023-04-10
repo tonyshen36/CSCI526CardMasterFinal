@@ -36444,11 +36444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7631503505796878062, guid: f047c0ec5e8a5bd48af97003c62c752b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.5
+      value: -9.53
       objectReference: {fileID: 0}
     - target: {fileID: 7631503505796878062, guid: f047c0ec5e8a5bd48af97003c62c752b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1
+      value: -5.45
       objectReference: {fileID: 0}
     - target: {fileID: 7631503505796878062, guid: f047c0ec5e8a5bd48af97003c62c752b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39489,6 +39489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1855134833}
+  - component: {fileID: 1855134834}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -39517,6 +39518,26 @@ Transform:
   m_Father: {fileID: 273534401}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855134834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855134832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ce202d9245274cb15f46f2c5e570b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes:
+  - {fileID: 398964747}
+  - {fileID: 931288373}
+  - {fileID: 205699480}
+  - {fileID: 1467337480}
+  - {fileID: 377187279}
+  - {fileID: 2040654768}
+  originalPosition: []
 --- !u!1 &1856122575
 GameObject:
   m_ObjectHideFlags: 0

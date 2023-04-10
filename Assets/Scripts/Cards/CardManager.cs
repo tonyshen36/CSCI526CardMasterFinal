@@ -51,6 +51,7 @@ public class CardManager : MonoBehaviour
     public int jumpRewardsCounter;
     public int moveRewardsCounter;
     public int backRewardsCounter;
+    public int dashRewardsCounter;
 
     public int RedrawTimes = 0;
     public int RedrawLimit = 5;
@@ -192,12 +193,17 @@ public class CardManager : MonoBehaviour
     {
         moveRewardsCounter++;
     }
+	public void setDashCounter()
+    {
+        dashRewardsCounter++;
+    }
 
     private void Start()
     {
         jumpRewardsCounter = 0;
         backRewardsCounter = 0;
         moveRewardsCounter = 0;
+		dashRewardsCounter = 0;
         StartCoroutine(UpdateHand());
     }
 

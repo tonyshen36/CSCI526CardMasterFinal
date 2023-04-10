@@ -4811,7 +4811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1541576256509234113, guid: b93ae1b78ae098d40bea1fcfec3a1282, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.26
+      value: 13.14
       objectReference: {fileID: 0}
     - target: {fileID: 1541576256509234113, guid: b93ae1b78ae098d40bea1fcfec3a1282, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4987,7 +4987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fbe0b5a89ee35144af5d5af2d19ac40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 9
+  sceneIndex: 6
 --- !u!61 &875345381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6120,16 +6120,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 36, y: -8, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 25, y: -7, z: 0}
     second:
       serializedVersion: 2
@@ -6140,27 +6130,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 36, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 25, y: -6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 36, y: -6, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 6
@@ -6190,16 +6160,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 36, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 25, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -6211,6 +6171,16 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 28, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 38, y: -4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 6
@@ -6294,7 +6264,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 104
+  - m_RefCount: 101
     m_Data: {fileID: 11400000, guid: eb1c0e80f4a2dc748bf011c8e5cd398d, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -6309,10 +6279,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 104
+  - m_RefCount: 101
     m_Data: {fileID: 7145198348311737387, guid: f73dfe034c22cfc41bd7e8799020a5ac, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 104
+  - m_RefCount: 101
     m_Data:
       e00: 1
       e01: 0
@@ -6331,7 +6301,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 104
+  - m_RefCount: 101
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -6644,7 +6614,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: startingDashCard
-      value: 10
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
+      propertyPath: startingJumpCard
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: startingSlashCard
@@ -6656,15 +6630,15 @@ PrefabInstance:
       objectReference: {fileID: 2567464198922249231, guid: 835d3b85b0df049788c3c6e71d26862b, type: 3}
     - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: startingDashBackCard
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: startingMoveBackCard
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: startingMoveRightCard
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5420827168725349638, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: m_Name

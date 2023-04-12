@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 respawnPoint; //recall where palyer restart
     public Vector3 checkPoint;
     public GameObject fallDetector; //link the script to FallDetector
-    
+    public int defaultLayer;
 
     //check if player is undeground
     public bool isUnderground=false;
@@ -58,8 +58,9 @@ public class PlayerController : MonoBehaviour
         jump_counter = 0;
         back_counter = 0;
         dash_counter = 0;
+        defaultLayer = gameObject.layer;
         //slash_counter = 0;
-        }
+    }
 
     private void Update()
     {
@@ -186,11 +187,46 @@ public class PlayerController : MonoBehaviour
             isUnderground = false;
         }
     }
+
+    public GameObject boss;
+
+    public void FreezeBoss()
+    {
+        // Get the BossController script attached to the boss GameObject
+        BossController bossController = boss.GetComponent<BossController>();
+
+        // Now you can call methods from the BossController script
+        bossController.Freeze();
+    }
+    
+    public float invulnerableDuration = 5f;
+
+    public void FreeDamage()
+    {
+        StartCoroutine(InvulnerabilityCoroutine());
+    }
+
+    private IEnumerator InvulnerabilityCoroutine()
+    {
+        // Set the player to the InvulnerablePlayer layer
+        gameObject.layer = LayerMask.NameToLayer("InvulnerablePlayer");
+
+        // Wait for the invulnerable duration
+        yield return new WaitForSeconds(invulnerableDuration);
+
+        // Set the player back to the default layer
+        gameObject.layer = defaultLayer;
+    }
+    
     public void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, 10 * speed);
     }
 
+    public void SuperJump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 25 * speed);
+    }
     public void MoveRight()
     {
         if(isMovingRight) { moveTimeLeft += moveWaitTime; }
@@ -217,57 +253,57 @@ public class PlayerController : MonoBehaviour
         else if (isMovingRight) { moveTimeLeft = moveWaitTime; }
         else { StartCoroutine(Move(-30)); }
     }
-
-    // //private bool isSuperDashing = false;
-    // public float superDashSpeed = 30f;
-    // public float superDashDuration = 2f;
-    //
-    // public void SuperDash()
-    // {
-    //     StartCoroutine(SetSuperDashCollisionCoroutine(true));
-    //     StartCoroutine(SuperDashCoroutine());
-    // }
-    //
-    // private IEnumerator SuperDashCoroutine()
-    // {
-    //     //SetSuperDashCollision(true);
-    //     //isSuperDashing = true;
-    //     moveWaitTime = 2f;
-    //     if (isMovingLeft) { moveTimeLeft += moveWaitTime; }
-    //     else if (isMovingRight) { moveTimeLeft = moveWaitTime; }
-    //     else
-    //     {
-    //         StartCoroutine(Move(15));
-    //     }
-    //     
-    //     yield return new WaitForSeconds(2f);
-    //     
-    //     
-    //     //isSuperDashing = false;
-    //     moveWaitTime = 0.2f;
-    //     // Re-enable collisions after the SuperDash
-    //     StartCoroutine(SetSuperDashCollisionCoroutine(false));
-    // }
-    // private IEnumerator SetSuperDashCollisionCoroutine(bool ignore)
-    // {
-    //     // Wait for the next fixed update to ensure that the physics calculations are done after setting the collision state
-    //     yield return new WaitForFixedUpdate();
-    //
-    //     SetSuperDashCollision(ignore);
-    // }
-    //
-    // private void SetSuperDashCollision(bool enable)
-    // {
-    //     int playerLayer = LayerMask.NameToLayer("Player");
-    //     int spikesLayer = LayerMask.NameToLayer("Spikes");
-    //     int enemiesLayer = LayerMask.NameToLayer("Enemies");
-    //
-    //     // When enabling the superdash, ignore collisions with spikes and enemies.
-    //     // When disabling the superdash, stop ignoring collisions with spikes and enemies.
-    //     Physics2D.IgnoreLayerCollision(playerLayer, spikesLayer, enable);
-    //     Physics2D.IgnoreLayerCollision(playerLayer, enemiesLayer, enable);
-    // }
-    //
+    
+    //private bool isSuperDashing = false;
+    public float superDashSpeed = 30f;
+    public float superDashDuration = 2f;
+    
+    public void SuperDash()
+    {
+        StartCoroutine(SetSuperDashCollisionCoroutine(true));
+        StartCoroutine(SuperDashCoroutine());
+    }
+    
+    private IEnumerator SuperDashCoroutine()
+    {
+        //SetSuperDashCollision(true);
+        //isSuperDashing = true;
+        moveWaitTime = 1.5f;
+        if (isMovingLeft) { moveTimeLeft += moveWaitTime; }
+        else if (isMovingRight) { moveTimeLeft = moveWaitTime; }
+        else
+        {
+            StartCoroutine(Move(25));
+        }
+        
+        yield return new WaitForSeconds(1.5f);
+        
+        
+        //isSuperDashing = false;
+        moveWaitTime = 0.2f;
+        // Re-enable collisions after the SuperDash
+        StartCoroutine(SetSuperDashCollisionCoroutine(false));
+    }
+    private IEnumerator SetSuperDashCollisionCoroutine(bool ignore)
+    {
+        // Wait for the next fixed update to ensure that the physics calculations are done after setting the collision state
+        yield return new WaitForFixedUpdate();
+    
+        SetSuperDashCollision(ignore);
+    }
+    
+    private void SetSuperDashCollision(bool enable)
+    {
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int spikesLayer = LayerMask.NameToLayer("Spikes");
+        int enemiesLayer = LayerMask.NameToLayer("Enemies");
+    
+        // When enabling the superdash, ignore collisions with spikes and enemies.
+        // When disabling the superdash, stop ignoring collisions with spikes and enemies.
+        Physics2D.IgnoreLayerCollision(playerLayer, spikesLayer, enable);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemiesLayer, enable);
+    }
+    
     private IEnumerator Move(float speed)
     {
         isMovingRight = true;

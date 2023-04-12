@@ -19,7 +19,7 @@ public class DoorController2 : MonoBehaviour
     {
         if (!isClose)
         {
-            if (door.transform.position.x<160)
+            if (player.transform.position.x<160)
             {
                 door.SetActive(false);
             }

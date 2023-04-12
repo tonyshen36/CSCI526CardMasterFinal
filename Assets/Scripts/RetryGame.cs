@@ -27,7 +27,7 @@ public class RetryGame : MonoBehaviour
 
     public void LevelTwoButton()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(13);
     }
 
     public void LoadIndex(int i)

@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 205699483}
   - component: {fileID: 205699482}
   - component: {fileID: 205699485}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spike (2)
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -1567,7 +1567,7 @@ GameObject:
   - component: {fileID: 377187283}
   - component: {fileID: 377187282}
   - component: {fileID: 377187281}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spike (4)
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -1734,7 +1734,7 @@ GameObject:
   - component: {fileID: 398964750}
   - component: {fileID: 398964749}
   - component: {fileID: 398964752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spike
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -26649,8 +26649,8 @@ Tilemap:
   - first: {x: -3, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -26659,8 +26659,8 @@ Tilemap:
   - first: {x: -2, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -26669,8 +26669,8 @@ Tilemap:
   - first: {x: -1, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -27306,36 +27306,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -1, y: -6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 24, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -27617,36 +27587,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -14, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -1, y: -5, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -35148,9 +35088,9 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 3075
+  - m_RefCount: 3066
     m_Data: {fileID: 11400000, guid: 64f0eef1363395e408da2588e729f979, type: 2}
-  - m_RefCount: 184
+  - m_RefCount: 187
     m_Data: {fileID: 11400000, guid: 81fe74c96b61c614fab3378280d7baef, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: b469ace75ead45f479c07e48d0b254d6, type: 2}
@@ -35167,9 +35107,9 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 8641367b280016a4aa41989f513a1b5e, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 3075
+  - m_RefCount: 3066
     m_Data: {fileID: -2658475963797995646, guid: e85c6e02fda4a004b84664f435ad4d73, type: 3}
-  - m_RefCount: 184
+  - m_RefCount: 187
     m_Data: {fileID: 4294643669078967044, guid: e85c6e02fda4a004b84664f435ad4d73, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1808344714089705743, guid: e85c6e02fda4a004b84664f435ad4d73, type: 3}
@@ -35186,7 +35126,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 9202526412431455181, guid: e85c6e02fda4a004b84664f435ad4d73, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3270
+  - m_RefCount: 3264
     m_Data:
       e00: 1
       e01: 0
@@ -35205,7 +35145,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3270
+  - m_RefCount: 3264
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -36041,7 +35981,7 @@ GameObject:
   - component: {fileID: 931288376}
   - component: {fileID: 931288375}
   - component: {fileID: 931288378}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spike (1)
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -36315,7 +36255,7 @@ GameObject:
   - component: {fileID: 996903119}
   - component: {fileID: 996903121}
   - component: {fileID: 996903120}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stick
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -37156,7 +37096,7 @@ GameObject:
   - component: {fileID: 1376398974}
   - component: {fileID: 1376398973}
   - component: {fileID: 1376398975}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spike
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -37496,49 +37436,19 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -1, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 28
+  - m_RefCount: 25
     m_Data: {fileID: 11400000, guid: eb1c0e80f4a2dc748bf011c8e5cd398d, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 64f0eef1363395e408da2588e729f979, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 28
+  - m_RefCount: 25
     m_Data: {fileID: 7145198348311737387, guid: f73dfe034c22cfc41bd7e8799020a5ac, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -2658475963797995646, guid: e85c6e02fda4a004b84664f435ad4d73, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 29
+  - m_RefCount: 26
     m_Data:
       e00: 1
       e01: 0
@@ -37557,7 +37467,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 29
+  - m_RefCount: 26
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -37816,7 +37726,7 @@ GameObject:
   - component: {fileID: 1467337483}
   - component: {fileID: 1467337482}
   - component: {fileID: 1467337485}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spike (3)
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -38166,7 +38076,7 @@ GameObject:
   - component: {fileID: 1502449015}
   - component: {fileID: 1502449017}
   - component: {fileID: 1502449016}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stick
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -39490,7 +39400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1855134833}
   - component: {fileID: 1855134834}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39592,7 +39502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: startingDashCard
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: startingJumpCard
@@ -39616,7 +39526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4085340986959499122, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: startingMoveRightCard
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420827168725349638, guid: 58afb289f0738e04e802a725b158d202, type: 3}
       propertyPath: m_Name
@@ -39886,7 +39796,7 @@ GameObject:
   - component: {fileID: 2040654772}
   - component: {fileID: 2040654771}
   - component: {fileID: 2040654770}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spike (5)
   m_TagString: Spike
   m_Icon: {fileID: 0}

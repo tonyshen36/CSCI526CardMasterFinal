@@ -7,7 +7,7 @@ public class BossController : MonoBehaviour
 {
     public GameObject boss;
     public float dashSpeed;
-    public float dashDuration;
+    //public float dashDuration;
     public float dashCooldown;
     public float attackRange;
     public GameObject player;
@@ -20,6 +20,7 @@ public class BossController : MonoBehaviour
     private bool isCooldown;
     private Vector2 targetPosition;
     public int groundContacts;
+    public bool isFrozen = false;
     
     private void Start()
     {
@@ -31,12 +32,14 @@ public class BossController : MonoBehaviour
         if (player != null)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
+           
             if (!isCooldown && distanceToPlayer <= attackRange)
             {
-                StartCoroutine(StartAttacking());
-                StartCoroutine(Cooldown());
+               
+                    StartCoroutine(StartAttacking());
+                    StartCoroutine(Cooldown());
             }
+                
         }
     }
     
@@ -49,7 +52,31 @@ public class BossController : MonoBehaviour
     //         rb.velocity = new Vector2(0, rb.velocity.y);
     //     }
     // }
+    // Your other boss controller code...
+   
 
+    public float freezeDuration = 3f;
+    public float jumpDuration = 1.5f;
+    public float dashDuration = 3f;
+    public void Freeze()
+    {
+        StartCoroutine(FreezeCoroutine());
+    }
+
+    private IEnumerator FreezeCoroutine()
+    {
+        isFrozen = true;
+
+        jumpDuration = 0f;
+        dashDuration = 0f;
+
+        yield return new WaitForSeconds(freezeDuration);
+
+        jumpDuration = 1.5f;
+        dashDuration = 3f;
+        isFrozen = false;
+    }
+    
     IEnumerator StartAttacking()
     {
         while (true)
@@ -58,7 +85,6 @@ public class BossController : MonoBehaviour
             {
                 // Randomly choose between dash and jump attacks
                 int attackType = Random.Range(0, 2);
-
                 if (attackType == 0)
                 {
                     StartCoroutine(Dash());
@@ -109,6 +135,7 @@ public class BossController : MonoBehaviour
         isAttacking = false;
         //StartCoroutine(Cooldown());
     }
+
     
     IEnumerator JumpAttack()
     {
@@ -116,7 +143,7 @@ public class BossController : MonoBehaviour
 
         // Set the jump height, duration, and delay between jumps
         float jumpHeight = 5f;
-        float jumpDuration = 1.5f;
+        //float jumpDuration = 1.5f;
         float delayBetweenJumps = 0.15f;
 
         // Determine the target position

@@ -52,8 +52,8 @@ public class CardManager : MonoBehaviour
     public int moveRewardsCounter;
     public int backRewardsCounter;
     public int dashRewardsCounter;
-	public int dashBackRewardsCounter;
-	public int slashRewardsCounter;
+    public int dashBackRewardsCounter;
+    public int slashRewardsCounter;
 
     public int RedrawTimes = 0;
     public int RedrawLimit = 5;
@@ -67,7 +67,7 @@ public class CardManager : MonoBehaviour
 
     private static int Card_Type_Number = 6;
 
-    
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -129,7 +129,7 @@ public class CardManager : MonoBehaviour
         }
         cardsInDeck = new List<GameObject>(deck);
     }
-        
+
     public void AddMove()
     {
         GameObject newCard = Instantiate(MoveCardPrefab, deckLocation);
@@ -195,15 +195,15 @@ public class CardManager : MonoBehaviour
     {
         moveRewardsCounter++;
     }
-	public void setDashCounter()
+    public void setDashCounter()
     {
         dashRewardsCounter++;
     }
-	public void setDashBackCounter()
+    public void setDashBackCounter()
     {
         dashBackRewardsCounter++;
     }
-	public void setSlashCounter()
+    public void setSlashCounter()
     {
         slashRewardsCounter++;
     }
@@ -213,9 +213,9 @@ public class CardManager : MonoBehaviour
         jumpRewardsCounter = 0;
         backRewardsCounter = 0;
         moveRewardsCounter = 0;
-		dashRewardsCounter = 0;
-		dashBackRewardsCounter = 0;
-		slashRewardsCounter = 0;
+        dashRewardsCounter = 0;
+        dashBackRewardsCounter = 0;
+        slashRewardsCounter = 0;
         StartCoroutine(UpdateHand());
     }
 
@@ -243,16 +243,20 @@ public class CardManager : MonoBehaviour
         if (current_type == 0)
         {
             return moveCardsInHand;
-        } else if (current_type == 1)
+        }
+        else if (current_type == 1)
         {
             return moveBackCardsInHand;
-        } else if (current_type == 2)
+        }
+        else if (current_type == 2)
         {
             return jumpCardsInHand;
-        } else if (current_type == 3)
+        }
+        else if (current_type == 3)
         {
             return dashCardsInHand;
-        } else if (current_type == 4)
+        }
+        else if (current_type == 4)
         {
             return dashBackCardsInHand;
         }
@@ -270,10 +274,11 @@ public class CardManager : MonoBehaviour
         if (current_in_hand == 2)
         {
             int prob = Random.Range(0, 10);
-            if (prob >= 2)
+            if (prob >= 3)
             {
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }
@@ -281,10 +286,11 @@ public class CardManager : MonoBehaviour
         if (current_in_hand == 3)
         {
             int prob = Random.Range(0, 10);
-            if (prob >= 5)
+            if (prob >= 6)
             {
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }
@@ -292,10 +298,11 @@ public class CardManager : MonoBehaviour
         if (current_in_hand == 4)
         {
             int prob = Random.Range(0, 10);
-            if (prob >= 8)
+            if (prob >= 11)
             {
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }

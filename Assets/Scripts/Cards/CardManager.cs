@@ -263,10 +263,39 @@ public class CardManager : MonoBehaviour
         return slashCardsInHand;
     }
 
+    private int getCardRemaining(int current_type)
+    {
+        if (current_type == 0)
+        {
+            return remainingMoveCards;
+        }
+        else if (current_type == 1)
+        {
+            return remainingMoveBackCards;
+        }
+        else if (current_type == 2)
+        {
+            return remainingJumpCards;
+        }
+        else if (current_type == 3)
+        {
+            return remainingDashCards;
+        }
+        else if (current_type == 4)
+        {
+            return remainingDashBackCards;
+        }
+        return remainingSlashCards;
+    }
+
     private bool isGoodChoice(int current_type)
     {
         int current_remain = remainingJumpCards + remainingMoveBackCards + remainingDashCards + remainingDashBackCards + remainingSlashCards + remainingMoveCards;
         if (current_remain <= 5)
+        {
+            return true;
+        }
+        if (current_remain == getCardRemaining(current_type))
         {
             return true;
         }

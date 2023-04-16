@@ -12,6 +12,7 @@ public class ShowRemain : MonoBehaviour
     public GameObject text5;
     public GameObject text6;
     public GameObject text7;
+    public GameObject bg;
     public static ShowRemain instance;
     public bool check = false;
 
@@ -28,6 +29,7 @@ public class ShowRemain : MonoBehaviour
             text5.SetActive(false);
             text6.SetActive(false);
             text7.SetActive(false);
+            bg.SetActive(false);
     }
     public void whenButtonClicked(){
         check = true;
@@ -39,6 +41,7 @@ public class ShowRemain : MonoBehaviour
             text5.SetActive(false);
             text6.SetActive(false);
             text7.SetActive(false);
+            bg.SetActive(false);
             
         }
         else
@@ -50,6 +53,7 @@ public class ShowRemain : MonoBehaviour
             text5.SetActive(true);
             text6.SetActive(true);
             text7.SetActive(true);
+            bg.SetActive(true);
         }
     }
 }

@@ -28,6 +28,7 @@ public class CardDash : MonoBehaviour, ICard, IPointerEnterHandler, IPointerExit
     public void ActiveCard()
     {
         PlayerController.instance.Dash();
+        this.transform.DOKill();
         RemoveCard();
     }
 

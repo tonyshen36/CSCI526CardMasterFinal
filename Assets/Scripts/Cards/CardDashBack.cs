@@ -28,6 +28,7 @@ public class CardDashBack : MonoBehaviour, ICard, IPointerEnterHandler, IPointer
     public void ActiveCard()
     {
         PlayerController.instance.DashBack();
+        this.transform.DOKill();
         RemoveCard();
     }
 

@@ -28,6 +28,7 @@ public class CardMoveBack : MonoBehaviour, ICard, IPointerEnterHandler, IPointer
     public void ActiveCard()
     {
         PlayerController.instance.MoveBack();
+        this.transform.DOKill();
         RemoveCard();
     }
 

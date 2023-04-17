@@ -28,6 +28,7 @@ public class CardMove : MonoBehaviour, ICard, IPointerEnterHandler, IPointerExit
     public void ActiveCard()
     {
         PlayerController.instance.MoveRight();
+        this.transform.DOKill();
         RemoveCard();
     }
 

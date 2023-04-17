@@ -20,6 +20,7 @@ public class CardSlash : MonoBehaviour, ICard, IPointerEnterHandler, IPointerExi
     public void ActiveCard()
     {
         PlayerController.instance.Slash();
+        this.transform.DOKill();
         RemoveCard();
     }
 

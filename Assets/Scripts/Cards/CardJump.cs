@@ -25,6 +25,7 @@ public class CardJump : MonoBehaviour, ICard, IPointerEnterHandler, IPointerExit
     public void ActiveCard()
     {
         PlayerController.instance.Jump();
+        this.transform.DOKill();
         RemoveCard();
     }
 

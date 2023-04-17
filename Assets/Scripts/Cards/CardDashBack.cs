@@ -65,12 +65,14 @@ public class CardDashBack : MonoBehaviour, ICard, IPointerEnterHandler, IPointer
             if (CardStack.instance.cards.Contains(this))
             {
                 CardStack.instance.cards.Remove(this);
+                if (CardStack.instance.cards.Count == 0) CardStack.instance.Shuffle.interactable = true;
                 tween.Kill();
                 ActiveCard();
             }
             else
             {
                 CardStack.instance.cards.Add(this);
+                CardStack.instance.Shuffle.interactable = false;
                 transform.position = startPosition;
                 Color temp = this.GetComponent<Outline>().effectColor;
                 this.GetComponent<Outline>().effectColor = new Color(temp.r, temp.g, temp.b, 1);
@@ -96,6 +98,7 @@ public class CardDashBack : MonoBehaviour, ICard, IPointerEnterHandler, IPointer
         if (CardStack.instance.cards.Contains(this))
         {
             CardStack.instance.cards.Remove(this);
+            if (CardStack.instance.cards.Count == 0) CardStack.instance.Shuffle.interactable = true;
             Color temp = this.GetComponent<Outline>().effectColor;
             number.gameObject.SetActive(false);
             tween.Kill();
@@ -104,6 +107,7 @@ public class CardDashBack : MonoBehaviour, ICard, IPointerEnterHandler, IPointer
         else
         {
             CardStack.instance.cards.Add(this);
+            CardStack.instance.Shuffle.interactable = false;
             Color temp = this.GetComponent<Outline>().effectColor;
             tween.Kill();
             this.GetComponent<Outline>().effectColor = new Color(temp.r, temp.g, temp.b, 1);

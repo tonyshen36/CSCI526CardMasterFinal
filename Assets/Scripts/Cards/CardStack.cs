@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardStack : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class CardStack : MonoBehaviour
     public Sprite number3;
     public Sprite number4;
     public Sprite number5;
+
+    public Button Shuffle;
 
     private void Awake()
     {

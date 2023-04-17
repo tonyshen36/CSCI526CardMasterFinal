@@ -168,6 +168,9 @@ MonoBehaviour:
   jumpRewardsCounter: 0
   moveRewardsCounter: 0
   backRewardsCounter: 0
+  dashRewardsCounter: 0
+  dashBackRewardsCounter: 0
+  slashRewardsCounter: 0
   RedrawTimes: 0
   RedrawLimit: 5
 --- !u!114 &7757421101279474956
@@ -187,6 +190,7 @@ MonoBehaviour:
   number3: {fileID: 21300000, guid: eb18d1940030ce44284f56f94db75e18, type: 3}
   number4: {fileID: 21300000, guid: b9a429a111c0f2d4190c82becc815037, type: 3}
   number5: {fileID: 21300000, guid: b4e8170aaad2df444898ed6f012b22ed, type: 3}
+  Shuffle: {fileID: 1510966368201776469}
   executing: 0
 --- !u!1 &4085340987568771649
 GameObject:

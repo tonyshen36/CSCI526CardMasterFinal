@@ -1,14 +1,11 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
-using Spine;
-using Spine.Unity;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
-    public Spine.AnimationState spineAnimationState;
 
     [SerializeField]
     private float speed = 1.0f;

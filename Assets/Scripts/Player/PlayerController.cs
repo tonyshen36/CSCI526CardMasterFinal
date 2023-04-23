@@ -67,15 +67,7 @@ public class PlayerController : MonoBehaviour
         
         rb.velocity = new Vector2(acc * speed, rb.velocity.y);
 
-        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
-
-        if (health <= 0)
-        {
-            transform.position = checkPoint;
-            rb.velocity = new Vector2(0, 0);
-            moveTimeLeft = 0;
-        }
-        
+        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);       
         
     }
     
@@ -144,7 +136,17 @@ public class PlayerController : MonoBehaviour
             Analyzer.instance.sendDeathData(spike_current_x, spike_current_y, "Monster");
             //transform.position = checkPoint;
             health -= 100;
-            rb.velocity = new Vector2(0, 0);
+			if (health <= 0)
+        	{
+            	transform.position = checkPoint;
+            	rb.velocity = new Vector2(0, 0);
+            	moveTimeLeft = 0;
+        	}
+			else{
+
+            	rb.velocity = new Vector2(0, 0);
+			}
+
             Debug.Log("Monster");
         }
 

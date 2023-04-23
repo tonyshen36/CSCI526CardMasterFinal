@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2042423902524787161, guid: 5f81b39fa16acba4a908002700e3bd80, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2042423903063241288, guid: 5f81b39fa16acba4a908002700e3bd80, type: 3}
       propertyPath: slash
       value: 
@@ -367,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628081218814131222, guid: 5f81b39fa16acba4a908002700e3bd80, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8829180750980632875, guid: 5f81b39fa16acba4a908002700e3bd80, type: 3}
       propertyPath: m_RootOrder
@@ -1379,7 +1383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fbe0b5a89ee35144af5d5af2d19ac40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 6
+  sceneIndex: 14
 --- !u!61 &128969774
 BoxCollider2D:
   m_ObjectHideFlags: 0

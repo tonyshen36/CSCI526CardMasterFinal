@@ -316,7 +316,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Dash
 
-    Back'
+    Left'
 --- !u!1 &9209491209413004943
 GameObject:
   m_ObjectHideFlags: 0

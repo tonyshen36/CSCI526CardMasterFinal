@@ -26752,7 +26752,7 @@ PrefabInstance:
     - target: {fileID: 1878138676564515292, guid: 83b04c6c95ad3b9419c5bca1a21db012, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1433084710}
     - target: {fileID: 1878138676564515292, guid: 83b04c6c95ad3b9419c5bca1a21db012, type: 3}
       propertyPath: CamSpeed
       value: 0.08
@@ -29114,6 +29114,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
+--- !u!1 &1433084710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5391747045245022565, guid: f047c0ec5e8a5bd48af97003c62c752b, type: 3}
+  m_PrefabInstance: {fileID: 1014228205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1467337480
 GameObject:
   m_ObjectHideFlags: 0

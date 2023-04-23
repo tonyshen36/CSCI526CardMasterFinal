@@ -142,7 +142,8 @@ public class PlayerController : MonoBehaviour
             float spike_current_x = transform.position.x;
             float spike_current_y = transform.position.y;
             Analyzer.instance.sendDeathData(spike_current_x, spike_current_y, "Monster");
-            transform.position = checkPoint;
+            //transform.position = checkPoint;
+            health -= 100;
             rb.velocity = new Vector2(0, 0);
             Debug.Log("Monster");
         }
@@ -359,16 +360,16 @@ public class PlayerController : MonoBehaviour
             foreach (Collider2D enemyCollider in hitEnemies)
             {
                 // Apply damage and instantiate lightning effect
-                if (enemyCollider.CompareTag("Boss"))
+                if (enemyCollider.CompareTag("Monster"))
                 {
                     GameObject enemyGameObject = enemyCollider.gameObject;
-                    BossController enemyScript = enemyGameObject.GetComponent<BossController>();
-                    enemyScript.health -= shockDamage;
-                    if (enemyScript.health <= 0)
-                    {
-                        // Handle boss death
-                        enemyGameObject.SetActive(false);
-                    }
+                    MonsterController enemyScript = enemyGameObject.GetComponent<MonsterController>();
+                    enemyScript.TakeDamage(1);
+                    // if (enemyScript.health <= 0)
+                    // {
+                    //     // Handle boss death
+                    //     enemyGameObject.SetActive(false);
+                    // }
 
                     UpdateLightningPositionAndScale(enemyGameObject);
 

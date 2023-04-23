@@ -34590,11 +34590,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7187153856356582369, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -10.15
+      value: -6.29
       objectReference: {fileID: 0}
     - target: {fileID: 7187153856356582369, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.62
+      value: 5.17
       objectReference: {fileID: 0}
     - target: {fileID: 7187153856356582369, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -34614,7 +34614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7187153856356582371, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
@@ -36916,6 +36916,10 @@ PrefabInstance:
     - target: {fileID: 1411524355337679229, guid: 08c69ce1f8931af4bb01d127cdac44d4, type: 3}
       propertyPath: m_Name
       value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411524355337679229, guid: 08c69ce1f8931af4bb01d127cdac44d4, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c69ce1f8931af4bb01d127cdac44d4, type: 3}
@@ -42018,6 +42022,10 @@ PrefabInstance:
     - target: {fileID: 1411524355337679229, guid: 08c69ce1f8931af4bb01d127cdac44d4, type: 3}
       propertyPath: m_Name
       value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411524355337679229, guid: 08c69ce1f8931af4bb01d127cdac44d4, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c69ce1f8931af4bb01d127cdac44d4, type: 3}

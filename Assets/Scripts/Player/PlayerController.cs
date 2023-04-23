@@ -1,11 +1,14 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Spine;
+using Spine.Unity;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
+    public Spine.AnimationState spineAnimationState;
 
     [SerializeField]
     private float speed = 1.0f;
@@ -64,6 +67,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        
         rb.velocity = new Vector2(acc * speed, rb.velocity.y);
 
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
@@ -227,6 +231,7 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, 25 * speed);
     }
+    
     public void MoveRight()
     {
         if(isMovingRight) { moveTimeLeft += moveWaitTime; }
@@ -311,11 +316,14 @@ public class PlayerController : MonoBehaviour
         acc = speed;
         while (moveTimeLeft > 0)
         {
+            
             //acc = Mathf.Lerp(0, 10, (waitTime - timeLeft) / waitTime);
             //PlayerController.instance.acc = acc;
             moveTimeLeft -= Time.deltaTime;
             yield return null;
         }
+     
+        //KnightController.instance.spineAnimationState.ClearTrack(0); 
         acc = 0;
         isMovingRight = false;
     }

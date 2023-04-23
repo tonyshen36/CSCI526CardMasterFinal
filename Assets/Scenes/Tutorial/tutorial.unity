@@ -2746,6 +2746,10 @@ PrefabInstance:
       propertyPath: numberOfJumpCard
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7187153854741912277, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7187153854741912278, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -14359,8 +14363,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4283943935
+  m_fontColor: {r: 1, g: 0.7960785, b: 0.34117648, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16633,6 +16637,18 @@ PrefabInstance:
     - target: {fileID: 7187153855249097782, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187153856356582368, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187153856356582368, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
+      propertyPath: m_Color.g
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187153856356582368, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
+      propertyPath: m_Color.r
+      value: 0.78431374
       objectReference: {fileID: 0}
     - target: {fileID: 7187153856356582369, guid: 94d22b9b33cccdb4dad2631deb005467, type: 3}
       propertyPath: m_Pivot.x

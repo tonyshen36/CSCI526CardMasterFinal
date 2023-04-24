@@ -23,6 +23,7 @@ TagManager:
   - Switch
   - Root
   - pCollider
+  - Fly
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - Enemies
   - Player
   - InvulnerablePlayer
-  - 
+  - Ground
   - 
   - 
   - 

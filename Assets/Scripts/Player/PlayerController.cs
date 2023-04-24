@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour
     public Vector3 checkPoint;
     public GameObject fallDetector; //link the script to FallDetector
     public int defaultLayer;
+	public bool isGrounded=false;
+	private Animator cloudanim;
+	public GameObject Cloud;
+	private Animator anim;
 
     //check if player is undeground
     public bool isUnderground=false;
@@ -52,7 +56,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-        
+        anim = GetComponent<Animator>();
+		Cloud = GameObject.Find("Cloud");
         respawnPoint = transform.position;
         move_counter = 0;
         jump_counter = 0;
@@ -70,6 +75,7 @@ public class PlayerController : MonoBehaviour
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);       
         
     }
+
     
     // private void OnCollisionEnter2D(Collision2D collision)
     // {
@@ -126,6 +132,19 @@ public class PlayerController : MonoBehaviour
         // }
 
     }
+	public LayerMask groundLayer;
+	public float groundCheckRadius = 0.1f;
+	public Transform groundCheckTransform;
+
+	void FixedUpdate()
+	{
+		float hor = Input.GetAxis ("Horizontal");
+		isGrounded = Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundLayer);
+		anim.SetFloat ("Speed", rb.velocity.x);
+		//rb2d.velocity = new Vector2 (hor * maxSpeed, rb.velocity.y);
+		anim.SetBool ("IsGrounded", isGrounded);
+		anim.SetFloat ("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
+	}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -308,9 +327,10 @@ public class PlayerController : MonoBehaviour
         Physics2D.IgnoreLayerCollision(playerLayer, spikesLayer, enable);
         Physics2D.IgnoreLayerCollision(playerLayer, enemiesLayer, enable);
     }
-    
+    public bool facingRight=true;
     private IEnumerator Move(float speed)
     {
+		if((speed<0 && facingRight) || (speed>0 && !facingRight)) {Flip();}
         isMovingRight = true;
         moveTimeLeft = moveWaitTime;
         acc = speed;
@@ -327,7 +347,13 @@ public class PlayerController : MonoBehaviour
         acc = 0;
         isMovingRight = false;
     }
-    
+    public void Flip()
+	{
+		facingRight=!facingRight;
+		Vector3 myScale = transform.localScale;
+		myScale.x *= -1;
+		transform.localScale = myScale;
+	}
     public float shockDuration = 1f;
     public float shockRange = 10f;
     public int shockDamage = 5;

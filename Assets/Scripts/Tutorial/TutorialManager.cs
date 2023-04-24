@@ -9,6 +9,8 @@ public class TutorialManager : MonoBehaviour
     public ItemJumpCard itemJumpCard;
     bool collide = false;
     public GameObject go1;
+    public GameObject go12;
+    public GameObject go13;
     public GameObject go2;
     public GameObject go3;
     public GameObject go4;
@@ -37,46 +39,76 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.A)||Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.D)){
+        if(PlayerController.instance.isMovingRight == true){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(true);
         }
-        if (PlayerController.instance.isMovingRight == true){
+        if (Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.A)||Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.D)){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(true);
         }
         if (hintpoint0.instance.check == true){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
+            go2.SetActive(false);
+            go3.SetActive(false);
+        }
+        if(collide){
+            go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(false);
             go4.SetActive(true);
         }
-        if(collide){
+        if(hintpoint.instance.check == true){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(false);
             go4.SetActive(false);
             go5.SetActive(true);
         }
-        if(hintpoint.instance.check == true){
+        if(hintpoint11.instance.check == true){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
+            go2.SetActive(false);
+            go3.SetActive(false);
+            go4.SetActive(false);
+            go5.SetActive(false);
+        }
+        if(hintpoint2.instance.check == true){
+            go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(false);
             go4.SetActive(false);
             go5.SetActive(false);
             go6.SetActive(true);
         }
-        if(hintpoint11.instance.check == true){
+        if(hintpoint21.instance.check == true){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(false);
             go4.SetActive(false);
             go5.SetActive(false);
             go6.SetActive(false);
         }
-        if(hintpoint2.instance.check == true){
+        if(hintpoint3.instance.check == true){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(false);
             go4.SetActive(false);
@@ -84,8 +116,10 @@ public class TutorialManager : MonoBehaviour
             go6.SetActive(false);
             go7.SetActive(true);
         }
-        if(hintpoint21.instance.check == true){
+        if(hintpoint31.instance.check == true){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(false);
             go4.SetActive(false);
@@ -93,8 +127,10 @@ public class TutorialManager : MonoBehaviour
             go6.SetActive(false);
             go7.SetActive(false);
         }
-        if(hintpoint3.instance.check == true){
+        if(hintpoint4.instance.check == true){
             go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(false);
             go4.SetActive(false);
@@ -103,18 +139,10 @@ public class TutorialManager : MonoBehaviour
             go7.SetActive(false);
             go8.SetActive(true);
         }
-        if(hintpoint31.instance.check == true){
+        if(hintpoint5.instance.check == true){
             go1.SetActive(false);
-            go2.SetActive(false);
-            go3.SetActive(false);
-            go4.SetActive(false);
-            go5.SetActive(false);
-            go6.SetActive(false);
-            go7.SetActive(false);
-            go8.SetActive(false);
-        }
-        if(hintpoint4.instance.check == true){
-            go1.SetActive(false);
+            go12.SetActive(false);
+            go13.SetActive(false);
             go2.SetActive(false);
             go3.SetActive(false);
             go4.SetActive(false);
@@ -123,17 +151,6 @@ public class TutorialManager : MonoBehaviour
             go7.SetActive(false);
             go8.SetActive(false);
             go9.SetActive(true);
-        }
-        if(hintpoint5.instance.check == true){
-            go1.SetActive(false);
-            go2.SetActive(false);
-            go3.SetActive(false);
-            go4.SetActive(false);
-            go5.SetActive(false);
-            go6.SetActive(false);
-            go7.SetActive(false);
-            go8.SetActive(false);
-            go9.SetActive(false);
             go10.SetActive(true);
         }
     }
